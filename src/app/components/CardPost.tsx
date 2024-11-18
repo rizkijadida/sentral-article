@@ -1,11 +1,11 @@
-import { getEntries } from "@/api/getEntries";
+"use client"
+import { getEntries } from "@/app/api/getEntries";
 import { findAsset } from "@/lib/findAssets";
+import { useState } from "react";
 import CardArticles from "./CardArticles";
-import { PaginationWithLinks } from "./PaginationWithLink";
-import { fetchPosts } from "@/lib/api";
-
 
 const CardPost = async () => {
+  const [page, setPage] = useState<number>(1);
 
   const articles = await getEntries();
   return (
@@ -28,8 +28,15 @@ const CardPost = async () => {
             />
           );
         })}
-       
       </section>
+
+      {/* <div className="w-fit mx-auto">
+        <Pagination
+          total={meta?.total || 0}
+          take={meta?.take || 0}
+          onChangePage={handleChangePaginate}
+        />
+      </div> */}
     </div>
   );
 };

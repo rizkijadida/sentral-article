@@ -9,15 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-		animation: {
-			'blink': 'blink 1s infinite', // Animasi selama 1 detik, berulang terus-menerus
-		  },
-		  keyframes: {
-			blink: {
-			  '0%, 100%': { opacity: '1' },  // Teks terlihat (opacity penuh)
-			  '50%': { opacity: '0' },       // Teks tidak terlihat (opacity 0)
-			},
-		  },
+      animation: {
+        blink: "blink 1s infinite", // Animasi selama 1 detik, berulang terus-menerus
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "1" }, // Teks terlihat (opacity penuh)
+          "50%": { opacity: "0" }, // Teks tidak terlihat (opacity 0)
+        },
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

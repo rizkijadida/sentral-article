@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -33,6 +33,12 @@ export const metadata: Metadata = {
     "Situs resmi Olimpiade 2024, tempat untuk mengikuti kompetisi dan melihat hasil terbaru.",
 };
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Sesuaikan berat font sesuai kebutuhan
+  variable: "--font-playfair", // Gunakan CSS variable
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,8 +46,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      {/* <body
         className={`${openSans.variable} ${geistMono.variable} antialiased space-y-10 bg-violet-100`}
+      > */}
+      <body
+        className={`${playfair.variable} space-y-10 bg-violet-100 font-sans antialiased`}
+        style={{ fontFamily: "Playfair Display, serif" }}
       >
         <Navbar />
         {children}
