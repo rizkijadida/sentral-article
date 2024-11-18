@@ -39,7 +39,7 @@ const CardArticles: React.FC<CardArticlesProps> = ({
         </CardHeader>
         <CardContent className="text-left ">
           <h2 className="line-clamp-2 text-lg font-semibold">{title}</h2>
-          <p className="text-sm font-light italic">24 Jan 2024 - {author}</p>
+          <p className="text-sm font-light italic">{createdAt} - {author}</p>
           <p className="line-clamp-3">{description}</p>
         </CardContent>
       </Card>

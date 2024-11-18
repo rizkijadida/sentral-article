@@ -1,9 +1,13 @@
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import SearchBar from "./components/SearchBar";
+import Posts from "./components/Posts";
+import Search from "./components/Search";
 
-import CardPost from "./components/CardPost";
-
-export default async function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams: Record<string, string | undefined>;
+}) {
   return (
     <main className="container">
       <div className="m-5 mx-auto grid items-center justify-center gap-10 text-center">
@@ -21,9 +25,17 @@ export default async function Home() {
             />
           </div>
         </div>
-        <SearchBar />
 
-        <CardPost />
+        <Search />
+
+        <div className="md:mx-10 mt-10">
+          <Separator className="bg-slate-800" />
+        </div>
+
+        {/* <CardPost /> */}
+        <div className="md:mx-5">
+          <Posts searchParams={searchParams} />
+        </div>
       </div>
     </main>
   );

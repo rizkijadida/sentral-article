@@ -4,7 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import DialogOnGoingEvent from "./DialogOnGoingEvent";
-import DropDownEvent from "./DropDownEvent";
 
 const Navbar = () => {
   const router = useRouter();
@@ -29,13 +28,22 @@ const Navbar = () => {
         </div>
 
         <div className="my-auto flex items-center justify-center space-x-5 md:w-[200x]">
-        <Button
+          <Button
             variant={"link"}
             onClick={() => router.push("/article")}
             className="w-[30px] md:block md:w-[100px] md:text-base"
           >
             Artikel
           </Button>
+
+          <Button
+            variant={"link"}
+            onClick={() => router.push("/event")}
+            className="w-[30px] md:block md:w-[100px] md:text-base"
+          >
+            Event
+          </Button>
+
           <Button
             variant={"link"}
             onClick={contactUsButton}
@@ -43,10 +51,6 @@ const Navbar = () => {
           >
             Contact Us
           </Button>
-
-          <DropDownEvent />
-
-          <DialogOnGoingEvent />
 
           <Button
             variant={"link"}
