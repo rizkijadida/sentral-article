@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+
 const Navbar = () => {
   const router = useRouter();
   const homeButton = () => router.push("/");
