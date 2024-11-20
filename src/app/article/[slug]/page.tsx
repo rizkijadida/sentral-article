@@ -89,48 +89,6 @@ const ArticleDetail: React.FC<ArticleDetailProps> = async ({ params }) => {
       </div>
     </div>
 
-    // <div className="container">
-    //   <div className="m-10 grid gap-y-10">
-    //     <section className="grid gap-y-5">
-    //       <Badge
-    //         variant="outline"
-    //         className="w-[100px] rounded-sm bg-green-100"
-    //       >
-    //         {article.items[0].fields.category}
-    //       </Badge>
-    //       <h1 className="2xl font-semibold md:text-4xl">
-    //         {article.items[0].fields.title}
-    //       </h1>
-    //       <p className="text-sm font-light italic">
-    //         {format(
-    //           new Date(article.items[0].fields.createdAt),
-    //           "dd MMMM yyyy",
-    //         )}{" "}
-    //         - {article.items[0].fields.author}
-    //       </p>
-
-    //       <div className="relative h-[200px] w-full rounded-3xl md:h-[400px]">
-    //         <Image
-    //           src={`https:${image?.fields.file.url}`}
-    //           alt="thumbnail"
-    //           fill
-    //           className="object-cover"
-    //         />
-    //       </div>
-    //     </section>
-
-    //     {/* <Content></Content> */}
-    //     <section className="grid space-y-5">
-    //       {documentToReactComponents(
-    //         article.items[0].fields.content,
-    //         RICHTEXT_OPTIONS,
-    //       )}
-    //     </section>
-    //     <section>
-    //         <Posts searchParams={params}/>
-    //     </section>
-    //   </div>
-    // </div>
   );
 };
 

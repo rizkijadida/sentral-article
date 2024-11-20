@@ -5,6 +5,7 @@ import { PaginationWithLinks } from "./PaginationWithLink";
 interface PostsProps {
   searchParams: { [key: string]: string | undefined };
 }
+
 export default async function Posts({ searchParams }: PostsProps) {
   const currentPage = parseInt((searchParams.page as string) || "1");
   const postsPerPage = parseInt((searchParams.pageSize as string) || "5");

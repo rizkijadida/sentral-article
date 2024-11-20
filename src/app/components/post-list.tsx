@@ -5,6 +5,7 @@ import Link from "next/link";
 interface PostListProps {
   posts: post[];
 }
+
 export default function PostList({ posts }: PostListProps) {
   return (
     <div className="grid grid-cols-1 gap-6 px-4 py-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">

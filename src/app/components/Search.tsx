@@ -29,7 +29,9 @@ const Search = () => {
       const response = await fetch(
         `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&query=${query}&include=1&content_type=blog`,
       );
-      const data = await response.json();
+
+      const data = await response.json(); 
+
 
       setSearchResults(data.items);
       setAssets(data.includes?.Asset || []); // Simpan assets dari includes
