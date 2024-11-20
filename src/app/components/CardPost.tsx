@@ -1,14 +1,9 @@
-
 "use client";
-
 import { getEntries } from "@/app/api/getEntries";
 import { findAsset } from "@/lib/findAssets";
-import { useState } from "react";
 import CardArticles from "./CardArticles";
 
 const CardPost = async () => {
-
-
   const articles = await getEntries();
   return (
     <div className="container mx-auto">
